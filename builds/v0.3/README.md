@@ -131,7 +131,7 @@ foreach(value in mylist) {
 ```
 
 ### While
-> NEU!
+
 ```csc
 a = 0
 while(a<10) {
@@ -159,7 +159,7 @@ func return_null() {
 ---
 
 ## 7. Klassen
-> NEU!
+
 ```csc
 class Person {
     func __setup__(name, age) {
@@ -189,7 +189,7 @@ using net
 using sys
 using time
 ```
-> NEU!
+
 ```csc
 // Aliase:
 using time as t // time in der Variable t
@@ -252,3 +252,16 @@ say_hello()
 // Hello
 ```
 
+## 10. Lambdas
+> NEU!
+```csc
+// Einfache Lambdas:
+add = lambda(a, b) => a+b
+cmd.out(add(1, 2)) // 3
+
+// Erweiterte Lambdas:
+mult = lambda(a, b) {
+    result = a*b
+    return(result)
+}
+cmd.out(mult(5,9)) // 45
