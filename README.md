@@ -310,3 +310,10 @@ greet()
 // Zeit
 cmd.out("Aktuelle Zeit: " + time.time())
 ```
+
+---
+
+**IF THERE ARE ANY ERRORS, feel free to report them by just creating an ISSUE in this repo.**
+> Simply Paste an Screenshot or the Error Text **WITH CONTEXT** into the issue!
+
+Thanks for helping CoreScript!
