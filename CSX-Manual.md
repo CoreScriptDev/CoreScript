@@ -174,7 +174,7 @@ Every extension must contain an `extension.json` file.
 ### Example:
 ```json
 {
-  "author": "Nathan",
+  "author": "CoreScriptDev",
   "version": "1.0.0",
   "license": "MIT",
   "dependencies": [
