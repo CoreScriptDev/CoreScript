@@ -7,6 +7,7 @@ It allows developers to install and use modules (extensions) that provide functi
 
 ## Table of Contents
 - What is CSX?
+- CSX Commands
 - Installing Extensions
 - Providers
 - Using Extensions in Code
@@ -34,7 +35,37 @@ Key points:
 
 ---
 
-## 2. Installing Extensions
+## 2. CSX Commands
+
+### Install an extension
+```bash
+corescript csx install <source>
+```
+
+Installs an extension from GitHub, GitLab, or a local path.
+
+---
+
+### List installed extensions
+```bash
+corescript csx list
+```
+
+Lists all installed CSX extensions.
+
+---
+
+### Show extension details
+```bash
+corescript csx show <extension_name>
+```
+
+Displays detailed information about an installed extension  
+(author, license, dependencies, etc.).
+
+---
+
+## 3. Installing Extensions
 
 CSX is executed through CoreScript:
 
@@ -44,7 +75,7 @@ corescript csx install <source>
 
 ---
 
-### 2.1 Installing from GitHub or GitLab
+### 3.1 Installing from GitHub or GitLab
 
 ```bash
 corescript csx install <username>/<repository>/<optional_path> -p <provider>
@@ -71,7 +102,7 @@ corescript csx install Nathan/libs/mathutils -p gitlab
 
 ---
 
-### 2.2 Installing from Local Path
+### 3.2 Installing from Local Path
 
 ```bash
 corescript csx install <path/to/extension> -p local
@@ -84,7 +115,7 @@ corescript csx install D:/mylang/Repository/CoreScript/testmodule -p local
 
 ---
 
-## 3. Providers
+## 4. Providers
 
 Currently supported providers:
 
@@ -96,7 +127,7 @@ Currently supported providers:
 
 ---
 
-## 4. Using Extensions in Code
+## 5. Using Extensions in Code
 
 After installation, modules can be imported using `using`.
 
@@ -119,9 +150,9 @@ using testmodule as *;
 
 ---
 
-## 5. Creating Your Own Extension
+## 6. Creating Your Own Extension
 
-### 5.1 Folder Structure
+### 6.1 Folder Structure
 
 ```text
 testmodule/
@@ -136,14 +167,14 @@ testmodule/
 
 ---
 
-## 6. extension.json Reference
+## 7. extension.json Reference
 
 Every extension must contain an `extension.json` file.
 
 ### Example:
 ```json
 {
-  "author": "CoreScript",
+  "author": "Nathan",
   "version": "1.0.0",
   "license": "MIT",
   "dependencies": [
@@ -165,7 +196,7 @@ Every extension must contain an `extension.json` file.
 
 ---
 
-## 7. Dependencies
+## 8. Dependencies
 
 Dependencies use the following syntax:
 
@@ -177,7 +208,7 @@ pathToDependency@provider==/<=/>=/>/<version
 ```json
 "dependencies": [
   "mathutils@github>=1.2.0",
-  "localhelpers@gitlab"
+  "localhelpers@local"
 ]
 ```
 
@@ -185,7 +216,7 @@ pathToDependency@provider==/<=/>=/>/<version
 
 ---
 
-## 8. Security & Runtime
+## 9. Security & Runtime
 
 - Extensions run in the **same runtime** as the script
 - They have **exactly the same permissions**
@@ -193,7 +224,7 @@ pathToDependency@provider==/<=/>=/>/<version
 
 ---
 
-## 9. Current Limitations
+## 10. Current Limitations
 
 - No versioning yet
 - No update or uninstall commands
@@ -202,7 +233,7 @@ pathToDependency@provider==/<=/>=/>/<version
 
 ---
 
-## 10. Planned Features
+## 11. Planned Features
 
 - Versioning support
 - Update system
