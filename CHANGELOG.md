@@ -35,3 +35,23 @@
 > ```
 
 ---
+
+## [v0.3.1]
+**07.01.26**
+> - **WE FINALLY GOT AN ICON!**
+>
+> <img src="icon.png" width="96">
+>
+> <hr style="border-top: 1px dashed #aaa">
+>
+> Updated CSX System:
+> - Extensions are now packaged in '.cscext' files. They can now also contain multiple CoreScript source files.
+> - You can pack them using
+> ```bash
+> corescript csx pack <source-dir>
+> ```
+>- This will pack your source dir into an '.cscext' file which you can find in your working directory.
+>
+> - How to install extensions remains the same, except that you now specify the exact path to the '.cscext' file (with/without suffix).
+
+---
